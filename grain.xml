@@ -7,7 +7,7 @@
  <api-version/>
  <title>Layers context toolbox</title>
  <doc>Adds items to the "Layers" pane context menu: "Change Layer of Objects", "Make All Valid"</doc>
- <doc-url/>
+ <doc-url>README.md</doc-url>
  <url/>
  <license>GPLv3</license>
  <author>Jan Petykiewicz</author>
