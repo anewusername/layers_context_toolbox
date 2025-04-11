@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <klayout-macro>
- <description>add "Set All Valid" to layer context menu</description>
+ <description>add "Make All Valid" to layer context menu</description>
  <version/>
  <category>pymacros</category>
  <prolog/>
@@ -16,12 +16,12 @@
  <interpreter>python</interpreter>
  <dsl-interpreter-name/>
  <text>"""
-Add "Change Layer of Objects" to Layer context menu
+Add "Make All Valid" to Layer context menu
 """
 import pya
 
 
-def set_all_valid():
+def make_all_valid():
     view = pya.LayoutView.current()
     for layer in view.each_layer():
         layer.valid = True
@@ -31,8 +31,8 @@ mw = pya.Application.instance().main_window()
 menu = mw.menu()
 
 new_action = pya.Action()
-new_action.title = 'Set All Valid'
-new_action.on_triggered = set_all_valid
+new_action.title = 'Make All Valid'
+new_action.on_triggered = make_all_valid
 
 menu.insert_item('@lcp_context_menu.rename', 'make_all_valid', new_action)
 </text>

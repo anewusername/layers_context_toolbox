@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <klayout-macro>
- <description>add "Change Layer of Selection" to layer context menu</description>
+ <description>add "Change Layer of Objects" to layer context menu</description>
  <version/>
  <category>pymacros</category>
  <prolog/>
@@ -33,5 +33,6 @@ new_action.title = 'Change Layer of Objects'
 new_action.on_triggered = change_layer_action.trigger
 
 menu.insert_separator('@lcp_context_menu.end', 'tb_separator')
-menu.insert_item('@lcp_context_menu.end', 'change_layer', new_action)</text>
+menu.insert_item('@lcp_context_menu.end', 'change_layer', new_action)
+</text>
 </klayout-macro>
