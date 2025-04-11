@@ -34,5 +34,6 @@ new_action = pya.Action()
 new_action.title = 'Set All Valid'
 new_action.on_triggered = set_all_valid
 
-menu.insert_item('@lcp_context_menu.invvalid', 'change_layer', new_action)</text>
+menu.insert_item('@lcp_context_menu.rename', 'make_all_valid', new_action)
+</text>
 </klayout-macro>
