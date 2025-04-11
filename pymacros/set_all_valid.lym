@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description>add "Set All Valid" to layer context menu</description>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <priority>3</priority>
+ <shortcut>Ctrl+Shift+V</shortcut>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path>@lcp_context_menu.end</menu-path>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>"""
+Add "Change Layer of Objects" to Layer context menu
+"""
+import pya
+
+
+def set_all_valid():
+    view = pya.LayoutView.current()
+    for layer in view.each_layer():
+        layer.valid = True
+        layer.visible = True
+
+mw = pya.Application.instance().main_window()
+menu = mw.menu()
+
+new_action = pya.Action()
+new_action.title = 'Set All Valid'
+new_action.on_triggered = set_all_valid
+
+menu.insert_item('@lcp_context_menu.invvalid', 'change_layer', new_action)</text>
+</klayout-macro>

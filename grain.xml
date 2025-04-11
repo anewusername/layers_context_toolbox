@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<salt-grain>
+ <name>layers_context_toolbox</name>
+ <token/>
+ <hidden>false</hidden>
+ <version>1.0</version>
+ <api-version/>
+ <title>Layers context toolbox</title>
+ <doc>Adds items to the "Layers" pane context menu: "Change Layer of Objects", "Make All Valid"</doc>
+ <doc-url/>
+ <url/>
+ <license>GPLv3</license>
+ <author>Jan Petykiewicz</author>
+ <author-contact>jan@mpxd.net</author-contact>
+ <authored-time/>
+ <installed-time>2025-04-10T16:58:24</installed-time>
+ <icon/>
+ <screenshot/>
+</salt-grain>

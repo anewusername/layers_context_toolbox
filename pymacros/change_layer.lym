@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description>add "Change Layer of Selection" to layer context menu</description>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <priority>5</priority>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path>@lcp_context_menu.end</menu-path>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>"""
+Add "Change Layer of Objects" to Layer context menu
+
+Roughly follows method from https://www.klayout.de/forum/discussion/192/fill-klayout-dialogs-from-rba
+"""
+import pya
+
+mw = pya.Application.instance().main_window()
+menu = mw.menu()
+
+change_layer_action = menu.action('edit_menu.selection_menu.change_layer')
+change_layer_action.trigger
+
+new_action = pya.Action()
+new_action.title = 'Change Layer of Objects'
+new_action.on_triggered = change_layer_action.trigger
+
+menu.insert_separator('@lcp_context_menu.end', 'tb_separator')
+menu.insert_item('@lcp_context_menu.end', 'change_layer', new_action)</text>
+</klayout-macro>
