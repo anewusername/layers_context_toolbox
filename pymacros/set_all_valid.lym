@@ -9,7 +9,7 @@
  <autorun>true</autorun>
  <autorun-early>false</autorun-early>
  <priority>3</priority>
- <shortcut>Ctrl+Shift+V</shortcut>
+ <shortcut/>
  <show-in-menu>false</show-in-menu>
  <group-name/>
  <menu-path>@lcp_context_menu.end</menu-path>
@@ -33,6 +33,7 @@ menu = mw.menu()
 new_action = pya.Action()
 new_action.title = 'Make All Valid'
 new_action.on_triggered = make_all_valid
+new_action.default_shortcut = 'Ctrl+Shift+V'
 
 menu.insert_item('@lcp_context_menu.rename', 'make_all_valid', new_action)
 </text>
