@@ -3,7 +3,7 @@
  <name>layers_context_toolbox</name>
  <token/>
  <hidden>false</hidden>
- <version>1.1</version>
+ <version>1.2</version>
  <api-version/>
  <title>Layers context toolbox</title>
  <doc>Adds items to the "Layers" pane context menu: "Change Layer of Objects", "Make All Valid"</doc>
